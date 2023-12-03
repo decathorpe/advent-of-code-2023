@@ -4,7 +4,7 @@ use std::fs;
 use anyhow::bail;
 
 fn main() -> anyhow::Result<()> {
-    let Some(path) = env::args().skip(1).next() else {
+    let Some(path) = env::args().nth(1) else {
         bail!("Missing argument");
     };
 
